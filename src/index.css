@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+
+    .container{
+        @apply lg:w-11/12 md:w-5/6  mx-auto px-4 lg:px-0
+    }
+    .flex-center{
+        @apply flex justify-between items-center
+    }
+ 
+    .input{
+        @apply w-full md:w-2/3 outline-none rounded-md p-1 ring-indigo-500 ring-opacity-50 focus:ring-2 shadow-sm shadow-slate-500
+    }
+    
+    /* .parent{
+        animation: btn-ani 5s linear  infinite ;
+        border-radius: 50px;
+        border:2px solid black;
+        padding: 2px;
+        width: 6rem; 
+    } */
+    /* .test{
+        animation: btn-ani 5s linear  infinite ;
+        border-radius: 50px;
+        border:2px solid black;
+        padding: 2px;
+        width: 6rem;
+        transition: all ease-in 0.3s;
+    } */
+
+    /* @keyframes btn-ani {
+            
+        0%   {border-color:transparent; border-top-color: blue;}
+        25%  {border-color:transparent; border-right-color: blue;}
+        50%  {border-color:transparent; border-bottom-color: blue;}
+        75%  {border-color:transparent; border-left-color: blue;}
+        100% {border-color:transparent; border-top-color: blue;}
+    } */
+
+
+
+
+
+}
+
