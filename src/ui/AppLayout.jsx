@@ -6,14 +6,14 @@ import Loader from './Loader';
 const AppLayout = () => {
   const navigate = useNavigation();
   const loading = navigate.state;
-  
+  let url = window?.location?.pathname
   return (
     <>
       {loading === 'loading' && <Loader />}
 
       
         <div className='grid grid-rows-[auto_1fr_auto] h-screen'>
-          <Header />
+          <Header url={url}/>
           <main className='container overflow-auto max-w-3xl'>
             {loading !== 'loading' &&<Outlet />}
           </main>

@@ -1,5 +1,6 @@
 const API_URL = 'https://react-fast-pizza-api.onrender.com/api';
 
+
 // my fetch function
 
 
@@ -8,12 +9,12 @@ export async function getData(sliceUrl){
   try {
     
    if(sliceUrl[0]=='o'){
-    message=`Couldn't find order #${sliceUrl[6]}`
+    message=`Couldn't find order #${sliceUrl.slice(6)}`
    }else if(sliceUrl=='menu'){
     message ='Failed getting menu'
    }
     const response =await fetch(`${API_URL}/${sliceUrl}`)
-    
+    if(response.status=='404')throw new Error(message)
     const data =await response.json()
     return data
     

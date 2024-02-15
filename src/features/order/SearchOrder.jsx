@@ -6,6 +6,7 @@ const SearchOrder = () => {
   const navigate = useNavigate();
 
   function handlerSubmit(e) {
+    
     e.preventDefault();
     if (!query) return;
     navigate(`/order/${query}`);

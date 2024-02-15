@@ -17,6 +17,8 @@ function Order() {
   // Everyone can search for all orders, so for privacy reasons we're gonna gonna exclude names or address, these are only for the restaurant staff
 
  const {data} = useLoaderData()
+
+
  const {
    id,
    status,
@@ -87,12 +89,11 @@ function Order() {
 // eslint-disable-next-line react-refresh/only-export-components
 export async function loader(prop){
   const {orderId} = prop.params 
-
+  
  
     const data = await getData(`order/${orderId}`)
 
-    return data
-
+    return data 
 }
 
 export default Order;
